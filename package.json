@@ -48,6 +48,7 @@
     ]
   },
   "dependencies": {
+    "@bam.tech/react-native-make": "^3.0.0",
     "@emotion/core": "^10.0.28",
     "@emotion/native": "^10.0.27",
     "@mauron85/react-native-background-geolocation": "^0.6.3",

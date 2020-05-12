@@ -1,7 +1,7 @@
 import styled, { css } from '@emotion/native';
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { BackHandler, ScrollView, View } from 'react-native';
+import { BackHandler, Linking, ScrollView, View } from 'react-native';
 
 import checkmarkIcon from '../assets/svgs/checkmarkIcon';
 import languagesIcon from '../assets/svgs/languagesIcon';
@@ -29,6 +29,9 @@ export const SettingsScreen = ({ navigation }) => {
   const [userLocale, setUserLocale] = useState(
     supportedDeviceLanguageOrEnglish(),
   );
+
+  const toHawaiiNews = () =>
+    Linking.openURL('https://health.hawaii.gov/coronavirusdisease2019/');
 
   const backToMain = () => {
     navigation.goBack();
@@ -105,14 +108,16 @@ export const SettingsScreen = ({ navigation }) => {
         </Section>
         <Section>
           <Item
-            label={t('label.choose_provider_title')}
-            description={t('label.choose_provider_subtitle')}
-            onPress={() => navigation.navigate('ChooseProviderScreen')}
+            label='Receiving Updates from Aloha Trace'
+            description='This app will notify you of possible exposures to COVID-19.'
+            onPress={() => {
+              console.log('receiving updates');
+            }}
           />
           <Item
             label={t('label.news_title')}
             description={t('label.news_subtitle')}
-            onPress={() => navigation.navigate('NewsScreen')}
+            onPress={() => toHawaiiNews()}
           />
           <Item
             label={t('label.event_history_title')}

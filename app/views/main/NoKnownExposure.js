@@ -33,11 +33,7 @@ export const NoKnownExposure = () => {
             speed={20}
             duration={2000}
           />
-          <SvgXml
-            xml={StateNoContact}
-            width={size ? size : 80}
-            height={size ? size : 80}
-          />
+          <SvgXml xml={StateNoContact} width={120} height={120} />
         </View>
 
         <View style={styles.mainContainer}>

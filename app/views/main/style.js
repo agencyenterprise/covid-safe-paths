@@ -57,6 +57,7 @@ export const styles = StyleSheet.create({
     left: 0,
     right: 0,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   mainTextAbove: {
     textAlign: 'center',
