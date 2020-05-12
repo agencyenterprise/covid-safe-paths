@@ -29,6 +29,7 @@ class Entry extends Component {
     this.state = {
       initialRouteName: '',
     };
+    console.disableYellowBox = true;
   }
 
   componentDidMount() {
